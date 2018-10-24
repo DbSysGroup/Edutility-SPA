@@ -1,0 +1,36 @@
+<div class="nav">
+  <mat-toolbar>
+    <span>Edutility</span>
+    <span class="fill"></span>
+    <button mat-button [matMenuTriggerFor]="menuRef">
+        Trigger
+    </button>
+    
+    <mat-menu #menuRef="matMenu">
+        <a mat-menu-item href=""></a>
+    </mat-menu>
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Matches</a>
+      </li>
+    </ul>
+
+    <form [formGroup]="heroForm" class="form-inline my-2 my-lg-0" (ngSubmit)="login()">
+      <mat-form-field class="input-width">
+        <input matInput type="text" required placeholder="Username" formControlName="username">
+        <mat-error *ngIf="heroForm.get('username').hasError('required')">
+          Email is required.
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="input-width">
+        <input matInput type="password" required placeholder="Password" formControlName="password">
+        <mat-error *ngIf="heroForm.get('password').hasError('required')">
+          Password is required.
+        </mat-error>
+      </mat-form-field>
+    </form>
+
+  <button mat-raised-button (click)="login()">Login</button>
+  </mat-toolbar>
+</div>
