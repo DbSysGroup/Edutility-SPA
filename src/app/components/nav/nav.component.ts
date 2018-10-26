@@ -29,8 +29,13 @@ export class NavComponent implements OnInit {
   }
 
   login() {
+    const credentials = {
+      username: this.username,
+      password: this.password
+    };
+
     // always need to subscribe to observables
-    this.authService.login(this.username, this.password).subscribe(
+    this.authService.login(credentials).subscribe(
       next => {
         console.log("logged in successfully");
       },

@@ -10,9 +10,9 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  login(username: any, password: any) {
+  login(credentials: any) {
     // Observable rxJS
-    return this.http.post(this.baseUrl + "login", username, password).pipe(
+    return this.http.post(this.baseUrl + "login", credentials).pipe(
       map((response: any) => {
         const user = response;
         if (user) {
