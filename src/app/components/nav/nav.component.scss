@@ -1,3 +1,23 @@
-.fill {
-  flex: 1 1 auto;
+.nav {
+  background-color: #00E070;
+  height: 65px;
+
+  .title {
+    //color: #D27BDD;
+    color: #ffffff;
+    font-weight: bolder;
+    position: relative;
+    left: 20px;
+    margin-right: 35px;
+  }
+
+  .navbar-btn {
+    color: #ffffff;
+  }
+
+  .login-input, .form-control{
+    background-color: #00D168;
+    border-color: #00D168;
+    box-shadow: none;
+  }
 }

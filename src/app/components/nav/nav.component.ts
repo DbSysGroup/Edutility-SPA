@@ -5,7 +5,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 @Component({
   selector: "app-nav",
   templateUrl: "./nav.component.html",
-  styleUrls: ["./nav.component.css"]
+  styleUrls: ["./nav.component.scss"]
 })
 export class NavComponent implements OnInit {
   model: any = {};
@@ -29,8 +29,13 @@ export class NavComponent implements OnInit {
   }
 
   login() {
+    const credentials = {
+      username: this.username,
+      password: this.password
+    };
+
     // always need to subscribe to observables
-    this.authService.login(this.username, this.password).subscribe(
+    this.authService.login(credentials).subscribe(
       next => {
         console.log("logged in successfully");
       },
