@@ -16,13 +16,19 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { CreateSetComponent } from './components/create-set/create-set.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { AuthButtonsComponent } from './components/auth-buttons/auth-buttons.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavComponent,
-    CreateSetComponent
+    CreateSetComponent,
+    LoginComponent,
+    SignupComponent,
+    AuthButtonsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,8 +41,14 @@ import { CreateSetComponent } from './components/create-set/create-set.component
   ],
   providers: [
     AuthService,
-    AuthguardService
+    AuthguardService,
+    SignupComponent,
+    LoginComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ 
+    LoginComponent,
+    SignupComponent
+  ]
 })
 export class AppModule { }

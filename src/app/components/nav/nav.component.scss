@@ -1,23 +1,25 @@
-.nav {
-  background-color: #00E070;
-  height: 65px;
+.navbar {
+    background-color: #0dba86;
+    height: 80px;
 
-  .title {
-    //color: #D27BDD;
-    color: #ffffff;
-    font-weight: bolder;
-    position: relative;
-    left: 20px;
-    margin-right: 35px;
-  }
+    .title {
+        //color: #D27BDD;
+        color: #ffffff;
+        font-weight: bolder;
+        position: relative;
+        margin-right: 35px;
+        font-size: 1.5em;
+        left: 8vw;
+    }
 
-  .navbar-btn {
-    color: #ffffff;
-  }
+    .navbar-btn {
+        color: #ffffff;
+        position: relative;
+        left: 8vw;
+    }
+}
 
-  .login-input, .form-control{
-    background-color: #00D168;
-    border-color: #00D168;
-    box-shadow: none;
-  }
+::ng-deep .mat-button-focus-overlay, 
+::ng-deep .mat-ink-ripple {
+    background-color: transparent;
 }

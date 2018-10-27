@@ -1,0 +1,28 @@
+::ng-deep .mat-dialog-container {
+  padding: 0;
+  background-color: #ffffff;
+  border-radius: 0;
+}
+
+.navbar {
+  background-color: #0dba86;
+  height: 80px;
+
+  .btn {
+    box-shadow: none;
+
+    .glyphicon-remove {
+      color: #ffffff;
+      font-size: 35px;
+
+      &:hover {
+        color: rgba($color: #ffffff, $alpha: .65);
+      }
+    }
+  }
+}
+
+::ng-deep .mat-button-focus-overlay,
+::ng-deep .mat-ink-ripple {
+  background-color: transparent;
+}

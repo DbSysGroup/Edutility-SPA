@@ -1,31 +1,7 @@
   <div class="nav navbar">
     <span class="title">Edutility</span>
-    <button class="navbar-btn navbar-nav mr-auto" mat-button [matMenuTriggerFor]="menuRef">
+    <button class="navbar-btn navbar-nav mr-auto" mat-button>
         Trigger
     </button>
-    
-    <mat-menu #menuRef="matMenu">
-        <a mat-menu-item href="">Test</a>
-    </mat-menu>
-
-    <ul class="navbar-nav mr-auto">
-      <li>
-        <a class="nav-link" href="#">Matches</a>
-      </li>
-    </ul>
-
-    <form [formGroup]="heroForm" class="form-group form-inline my-2 my-lg-0 form-control-feedback" (ngSubmit)="login()">
-      <div class="input-width">
-        <input class="input-sm form-control" type="text" required placeholder="Username" formControlName="username">
-      </div>
-      &nbsp;
-      <mat-form-field class="input-width">
-        <input class="input-small form-control" type="password" required placeholder="Password" formControlName="password">
-        <mat-error *ngIf="heroForm.get('password').hasError('required')">
-          Password is required.
-        </mat-error>
-      </mat-form-field>
-    </form>
-
-  <button mat-raised-button (click)="login()">Login</button>
+    <app-auth-buttons></app-auth-buttons>
   </div>

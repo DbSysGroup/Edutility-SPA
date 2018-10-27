@@ -1,0 +1,35 @@
+.buttons {
+  position: relative;
+  right: 8vw;
+}
+
+.btn {
+  background-color: #2D3047;
+  color: #ffffff;
+  border-radius: 0;
+  height: 45px;
+  align-content: center;
+  outline: none;
+
+  &:hover {
+    background-color: #004777;
+    box-shadow: none;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  span {
+    font-size: .75em;
+  }
+}
+
+.no-bg {
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+    color: rgba($color: #ffffff, $alpha: .65);
+  }
+}

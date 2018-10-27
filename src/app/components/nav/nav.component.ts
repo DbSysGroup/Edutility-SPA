@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../../services/auth.service";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-nav",
@@ -10,7 +11,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 export class NavComponent implements OnInit {
   model: any = {};
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   heroForm: FormGroup;
 
@@ -43,5 +44,9 @@ export class NavComponent implements OnInit {
         console.error("failed to login");
       }
     );
+  }
+
+  signUp() {
+   
   }
 }
