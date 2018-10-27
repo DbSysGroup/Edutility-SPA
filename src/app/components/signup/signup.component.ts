@@ -21,4 +21,8 @@ export class SignupComponent implements OnInit {
     dialogConfig.height = "60%";
     this.dialog.open(SignupComponent, dialogConfig);
   }
+
+  closeDialog() {
+    this.dialog.closeAll();
+  }
 }

@@ -15,14 +15,12 @@
         color: #ffffff;
         font-size: 35px;
 
-
             &:hover {
                 color: rgba($color: #ffffff, $alpha: .65);
             }
         }
     }
 }
-
 
 ::ng-deep .mat-button-focus-overlay,
 ::ng-deep .mat-ink-ripple {
