@@ -4,16 +4,36 @@
   border-radius: 0;
 }
 
-.navbar {
+.nav {
   background-color: #0dba86;
   height: 80px;
+  margin: 0px;
+  width: 100%;
+  align-items: center;
 
-  .btn {
-    box-shadow: none;
-
-    .glyphicon-remove {
+    .title {
+        //color: #D27BDD;
         color: #ffffff;
-        font-size: 35px;
+        font-weight: bolder;
+        position: relative;
+        margin-right: 35px;
+        font-size: 1.5em;
+        left: 29px;
+    }
+
+  .no-bg {
+    background-color: transparent;
+    box-shadow: none;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    right: 29px;
+    margin: 0;
+    padding: 0;
+
+    .fa-times {
+        color: #ffffff;
+        font-size: 25px;
 
             &:hover {
                 color: rgba($color: #ffffff, $alpha: .65);
@@ -22,7 +42,22 @@
     }
 }
 
-::ng-deep .mat-button-focus-overlay,
-::ng-deep .mat-ink-ripple {
-  background-color: transparent;
+.contain {
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 29px;
+    margin-bottom: 29px;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+    overflow: hidden;
+
+    .input-width {
+        width: 100%;
+    }
+
+    input {
+        min-width: 100%;
+    }
 }
