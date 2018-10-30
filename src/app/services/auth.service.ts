@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { map } from "rxjs/operators";
-
+import { LoginComponent } from '../components/login/login.component';
+ 
 @Injectable({
   providedIn: "root"
 })
@@ -10,7 +11,9 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  login(credentials: any) {
+  login: LoginComponent;
+
+  logIn(credentials: any) {
     // Observable rxJS
     return this.http.post(this.baseUrl + "login", credentials).pipe(
       map((response: any) => {
@@ -18,6 +21,7 @@ export class AuthService {
         if (user) {
           localStorage.setItem("token", user.token);
         }
+        this.login.closeDialog();
       })
     );
   }

@@ -35,21 +35,21 @@ export class LoginComponent implements OnInit {
     return this.loginForm.get('password').value;
   }
 
-  login() {
+  logIn() {
     const creds = {
       email: this.email,
       password: this.password
     }
-
-    this.auth.login(creds);
+    console.log(creds.email, creds.password);
+    this.auth.logIn(creds);
   }
 
   openDialog() { 
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.width = "50%";
-    dialogConfig.height = "60%";
+    dialogConfig.width = "450px";
+    dialogConfig.height = "600px";
     this.dialog.open(LoginComponent, dialogConfig);
   }
 

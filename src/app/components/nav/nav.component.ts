@@ -36,7 +36,7 @@ export class NavComponent implements OnInit {
     };
 
     // always need to subscribe to observables
-    this.authService.login(credentials).subscribe(
+    this.authService.logIn(credentials).subscribe(
       next => {
         console.log("logged in successfully");
       },
