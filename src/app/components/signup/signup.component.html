@@ -1,6 +1,41 @@
-<div class="nav navbar">
-  <span class="mr-auto"></span>
-  <button type="button" class="btn no-bg" mat-button [disableRipple]="true" (click)="closeDialog()">
-    <span class=" glyphicon glyphicon-remove">&times;</span>
-  </button>
+<div>
+  <div class="nav">
+    <span class="title mr-auto">Sign up</span>
+    <button type="button" class="btn no-bg" (click)="closeDialog()">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+  </div>
+  <div class="contain">
+    <div [formGroup]=signupForm>
+      <mat-form-field class="input-width">
+        <input matInput formControlName="username" type="text" required placeholder="Username">
+        <mat-error *ngIf="this.signupForm.get('username').hasError('required')">
+          Username is required.
+        </mat-error>
+      </mat-form-field> <br>
+      <mat-form-field class="input-width">
+        <input matInput formControlName="email" type="text" required placeholder="Email">
+        <mat-error *ngIf="this.signupForm.get('email').hasError('required')">
+          Email is required.
+        </mat-error>
+        <mat-error *ngIf="this.signupForm.get('email').hasError('pattern')">
+          Enter a valid email address.
+        </mat-error>
+      </mat-form-field> <br>
+      <mat-form-field class="input-width">
+        <input matInput formControlName="password" type="password" required placeholder="Password">
+        <mat-error *ngIf="this.signupForm.get('password').hasError('required')">
+          Password is required.
+        </mat-error>
+      </mat-form-field> <br>
+      <mat-form-field class="input-width">
+        <input matInput formControlName="school" type="text" placeholder="School Name">
+      </mat-form-field> <br>
+      <mat-form-field class="input-width">
+        <input matInput formControlName="dob" type="date" placeholder="Date of Birth">
+      </mat-form-field> <br>
+    </div>
+    <span class="padding mr-auto"></span>
+    <button class="btn login-btn" mat-button (click)="signUp()">Sign up</button>
+  </div>
 </div>
